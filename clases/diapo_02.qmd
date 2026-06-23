@@ -1,7 +1,7 @@
 ---
-listing_title: "Diapositiva 01"
+listing_title: "Diapositiva 02"
 title: "Data Science y Analytics en Servicios Financieros"
-subtitle: "Clase 01 – Lorem ipsum"
+subtitle: "Clase 02 – Calidad, Gobernanza y Sesgos en IA"
 institution: 'Lorem ipsum'
 lang: es
 date: today
@@ -12,7 +12,7 @@ format:
     self-contained: true
     incremental: true
     transition: slide
-    logo: "imagenes/logo_db.jpg"
+    logo: "imagenes/logo_db.png"
     footer: "© Sebastián Egaña Santibáñez"
   pdf:
     toc: false
