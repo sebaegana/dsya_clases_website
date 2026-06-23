@@ -2,12 +2,10 @@
   {
     "listing": "/clases/index.html",
     "items": [
-      "/clases/notebook_01.pdf",
       "/clases/diapo_01.html",
       "/clases/202606_diapo01_introduccion-y-contexto.html",
       "/clases/diapo_02.html",
-      "/clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html",
-      "/clases/clases.html"
+      "/clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html"
     ]
   }
 ]
