@@ -1,5 +1,6 @@
 ---
 listing_title: "Diapositiva 02 (2026-06)"
+pdf: "202606_diapo02_calidad-gobernanza-sesgos-ia.pdf"
 title: "Data Science y Analytics en Servicios Financieros"
 subtitle: "Clase 02 – Calidad, Gobernanza y Sesgos en IA"
 institution: 'Lorem ipsum'

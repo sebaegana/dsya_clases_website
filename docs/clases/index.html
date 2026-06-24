@@ -75,20 +75,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-clases-actuales .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-listing_title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-listing_title','listing-pdf',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-engines","listing-language","listing-listing_title","listing-pdf","listing-title","listing-subtitle","listing-institution","listing-lang","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-clases-actuales'] = new List('listing-clases-actuales', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-material-anterior .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-listing_title','listing-pdf',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-engines","listing-language","listing-listing_title","listing-pdf","listing-title","listing-subtitle","listing-institution","listing-lang","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-material-anterior'] = new List('listing-material-anterior', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -184,6 +212,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#clases-del-curso" id="toc-clases-del-curso" class="nav-link active" data-scroll-target="#clases-del-curso">Clases del curso</a></li>
+  <li><a href="#material-anterior" id="toc-material-anterior" class="nav-link" data-scroll-target="#material-anterior">Material anterior</a></li>
   </ul>
 </nav>
     </div>
@@ -211,64 +240,46 @@ window.Quarto = {
 
 <section id="clases-del-curso" class="level1">
 <h1>Clases del curso</h1>
+<div id="listing-clases-actuales" class="quarto-listing quarto-listing-container-custom">
+<table class="table caption-top">
+<tbody>
+<tr class="odd" data-index="0" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782280629159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2458">
+<td class="listing-title"><a href="../clases/202606_diapo01_introduccion-y-contexto.html">Diapositiva 01 (2026-06)</a></td>
+<td class="listing-pdf"><a href="202606_diapo01_introduccion-y-contexto.pdf" download="">Descargar PDF</a></td>
+</tr>
+<tr class="even" data-index="1" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782280608625" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1271">
+<td class="listing-title"><a href="../clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html">Diapositiva 02 (2026-06)</a></td>
+<td class="listing-pdf"><a href="202606_diapo02_calidad-gobernanza-sesgos-ia.pdf" download="">Descargar PDF</a></td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="material-anterior" class="level1">
+<h1>Material anterior</h1>
+<p>Versiones reemplazadas o sesiones previas, mantenidas como referencia.</p>
+<div id="listing-material-anterior" class="quarto-listing quarto-listing-container-custom">
+<table class="table caption-top">
+<tbody>
+<tr class="odd" data-index="0" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782280573236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5140">
+<td class="listing-title"><a href="../clases/diapo_01.html">Diapositiva 01</a></td>
+<td class="listing-pdf"><a href="diapo_01.pdf" download="">Descargar PDF</a></td>
+</tr>
+<tr class="even" data-index="1" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782280601661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1271">
+<td class="listing-title"><a href="../clases/diapo_02.html">Diapositiva 02</a></td>
+<td class="listing-pdf"><a href="diapo_02.pdf" download="">Descargar PDF</a></td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782191415843" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5140">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/diapo_01.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782280157066" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2458">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/202606_diapo01_introduccion-y-contexto.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 01 (2026-06)
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782191037275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1271">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/diapo_02.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 02
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1782273600000" data-listing-file-modified-sort="1782191619505" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1271">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 02 (2026-06)
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

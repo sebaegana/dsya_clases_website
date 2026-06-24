@@ -1,10 +1,30 @@
 ---
 title: "Clases"
 listing:
-  contents: "*.qmd"
-  sort: "listing_title"
-  type: default
-  fields: [listing_title]    # ✅ Only show the title
+  - id: clases-actuales
+    contents:
+      - "202606_diapo01_introduccion-y-contexto.qmd"
+      - "202606_diapo02_calidad-gobernanza-sesgos-ia.qmd"
+    template: "_listado-clases.ejs.md"
+    sort: "listing_title"
+    fields: [listing_title, pdf]
+  - id: material-anterior
+    contents:
+      - "diapo_01.qmd"
+      - "diapo_02.qmd"
+    template: "_listado-clases.ejs.md"
+    sort: "listing_title"
+    fields: [listing_title, pdf]
 ---
 
 # Clases del curso
+
+::: {#clases-actuales}
+:::
+
+# Material anterior
+
+Versiones reemplazadas o sesiones previas, mantenidas como referencia.
+
+::: {#material-anterior}
+:::

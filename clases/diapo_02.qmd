@@ -1,5 +1,6 @@
 ---
 listing_title: "Diapositiva 02"
+pdf: "diapo_02.pdf"
 title: "Data Science y Analytics en Servicios Financieros"
 subtitle: "Clase 02 – Calidad, Gobernanza y Sesgos en IA"
 institution: 'Lorem ipsum'

@@ -711,7 +711,7 @@
     "href": "clases/diapo_01.html#resultado",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Resultado",
-    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 77.4\""
+    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.3\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 78.31\""
   },
   {
     "objectID": "clases/diapo_01.html#hipótesis-de-los-mercados-eficientes",
@@ -809,7 +809,7 @@
     "href": "clases/index.html",
     "title": "Clases",
     "section": "",
-    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01 (2026-06)\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 02\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 02 (2026-06)\n\n\n\n\n\nNo matching items"
+    "text": "Clases del curso\n\n\n\n\nDiapositiva 01 (2026-06)\nDescargar PDF\n\n\nDiapositiva 02 (2026-06)\nDescargar PDF\n\n\n\nNo matching items\n\n\n\nMaterial anterior\nVersiones reemplazadas o sesiones previas, mantenidas como referencia.\n\n\n\n\nDiapositiva 01\nDescargar PDF\n\n\nDiapositiva 02\nDescargar PDF\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
