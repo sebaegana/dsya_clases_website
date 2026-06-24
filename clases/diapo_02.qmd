@@ -25,6 +25,8 @@ format:
 <style>
 .smaller { font-size: 85%; }
 .tiny { font-size: 70%; }
+.reveal table { width: 100%; table-layout: fixed; }
+.reveal table th, .reveal table td { word-wrap: break-word; overflow-wrap: break-word; }
 </style>
 ```
 

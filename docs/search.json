@@ -179,7 +179,7 @@
     "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#dimensiones-de-la-calidad-de-datos",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Dimensiones de la calidad de datos",
-    "text": "Dimensiones de la calidad de datos\n\n\n\n\n\n\n\n\n\nDimensión\nDescripción breve\nEjemplo\n\n\n\n\nCompletitud\nAusencia de valores faltantes\n% de clientes sin RUT o correo\n\n\nExactitud\nConcordancia con la realidad\nDirección o edad correcta\n\n\nConsistencia\nCoherencia entre sistemas\nFecha nacimiento &lt;&gt; fecha afiliación\n\n\nActualización\nVigencia de la información\nCliente activo con contacto obsoleto\n\n\n\n\nPregunta: identificar un caso de baja calidad en datos internos o de clientes, por ejemplo, en la industria financiera."
+    "text": "Dimensiones de la calidad de datos\n\n\n\n\n\n\n\n\n\nDimensión\nDescripción breve\nEjemplo\n\n\n\n\nCompletitud\nAusencia de valores faltantes\n% de clientes sin RUT o correo\n\n\nExactitud\nConcordancia con la realidad\nDirección o edad correcta\n\n\nConsistencia\nCoherencia entre sistemas\nFecha nacimiento &lt;&gt; fecha afiliación\n\n\nActualización\nVigencia de la información\nCliente activo con contacto obsoleto"
   },
   {
     "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
@@ -312,7 +312,7 @@
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#estructura-de-la-sesión",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Estructura de la Sesión",
-    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n20 min\nContexto y motivación: por qué importan los datos y la IA hoy\n\n\n2\n35 min\nDecision Science: decisiones intuitivas vs. estructuradas, sesgos cognitivos\n\n\n3\n20 min\nFramework organizacional: Decision Stack, triaging y calidad de datos\n\n\n4\n45 min\nLos enemigos silenciosos de los datos + Actividad de diagnóstico (15 min)"
+    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n20 min\nContexto y motivación\n\n\n2\n35 min\nDecision Science\n\n\n3\n20 min\nFramework organizacional\n\n\n4\n45 min\nEnemigos silenciosos de los datos + Actividad (15 min)"
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#contexto-actual",
@@ -410,7 +410,14 @@
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#más-allá-de-datos-sucios",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Más allá de “datos sucios”",
-    "text": "Más allá de “datos sucios”\n\n“Mala calidad de datos” no es el único problema que hunde un proyecto\nHay fallas estructurales que pasan una revisión básica de calidad y aun así rompen un modelo\nNo son los sesgos cognitivos que vimos antes (esos viven en la cabeza de quien decide): estos viven dentro del dataset, incluso si nadie tiene intención de discriminar\nTres enemigos frecuentes, poco visibles para quien no es técnico:\n\n\n\n\n\n\n\n\n\nEnemigo\nEn una frase\n\n\n\n\nRepresentación\nFalta un grupo entero en los datos\n\n\nHistórico\nLos datos repiten decisiones injustas del pasado\n\n\nLeakage\nEl modelo “ve” información que no tendrá disponible en la realidad"
+    "text": "Más allá de “datos sucios”\n\n“Mala calidad de datos” no es el único problema que hunde un proyecto\nHay fallas estructurales que pasan una revisión básica de calidad y aun así rompen un modelo\nNo son los sesgos cognitivos que vimos antes (esos viven en la cabeza de quien decide): estos viven dentro del dataset, incluso si nadie tiene intención de discriminar"
+  },
+  {
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#tres-enemigos-frecuentes",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#tres-enemigos-frecuentes",
+    "title": "Data Science y Analytics en Servicios Financieros",
+    "section": "Tres enemigos frecuentes",
+    "text": "Tres enemigos frecuentes\nPoco visibles para quien no es técnico:\n\n\n\n\n\n\n\n\nEnemigo\nEn una frase\n\n\n\n\nRepresentación\nFalta un grupo entero en los datos\n\n\nHistórico\nLos datos repiten decisiones injustas del pasado\n\n\nLeakage\nEl modelo “ve” información que no tendrá disponible en la realidad"
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-1-sesgo-de-representación",
@@ -459,7 +466,7 @@
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#glosario-complemento",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Glosario (complemento)",
-    "text": "Glosario (complemento)\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nSesgo de representación\nEl dataset no incluye a todos los grupos que el modelo afectará\n\n\nSesgo histórico\nEl dataset refleja decisiones injustas del pasado y el modelo las repite\n\n\nData Leakage\nInformación que solo existe después del evento que se quiere predecir, filtrada al entrenamiento"
+    "text": "Glosario (complemento)\n\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nSesgo de representación\nEl dataset no incluye a todos los grupos que el modelo afectará\n\n\nSesgo histórico\nEl dataset refleja decisiones injustas del pasado y el modelo las repite\n\n\nData Leakage\nInformación que solo existe después del evento que se quiere predecir, filtrada al entrenamiento"
   },
   {
     "objectID": "clases/diapo_01.html#contexto-actual",
@@ -711,7 +718,7 @@
     "href": "clases/diapo_01.html#resultado",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Resultado",
-    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.3\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 78.31\""
+    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 75.01\""
   },
   {
     "objectID": "clases/diapo_01.html#hipótesis-de-los-mercados-eficientes",

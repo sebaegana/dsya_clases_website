@@ -39,13 +39,13 @@ library(knitr)
 
 ## Estructura de la Sesión
 
-::: smaller
+::: tiny
 | Bloque | Duración | Contenido |
 |---|---|---|
-| **1** | 20 min | Contexto y motivación: por qué importan los datos y la IA hoy |
-| **2** | 35 min | Decision Science: decisiones intuitivas vs. estructuradas, sesgos cognitivos |
-| **3** | 20 min | Framework organizacional: Decision Stack, triaging y calidad de datos |
-| **4** | 45 min | Los enemigos silenciosos de los datos + Actividad de diagnóstico (15 min) |
+| **1** | 20 min | Contexto y motivación |
+| **2** | 35 min | Decision Science |
+| **3** | 20 min | Framework organizacional |
+| **4** | 45 min | Enemigos silenciosos de los datos + Actividad (15 min) |
 :::
 
 ---
@@ -363,7 +363,12 @@ Las causas más comunes:
 - "Mala calidad de datos" no es el único problema que hunde un proyecto
 - Hay fallas **estructurales** que pasan una revisión básica de calidad y aun así rompen un modelo
 - **No son los sesgos cognitivos que vimos antes** (esos viven en la cabeza de quien decide): estos viven **dentro del dataset**, incluso si nadie tiene intención de discriminar
-- Tres enemigos frecuentes, poco visibles para quien no es técnico:
+
+---
+
+## Tres enemigos frecuentes
+
+Poco visibles para quien no es técnico:
 
 :::smaller
 | Enemigo | En una frase |
@@ -551,11 +556,13 @@ Compartan sus respuestas con el resto del curso.
 
 ## Glosario (complemento)
 
+::: tiny
 | Término | Definición simple |
 |---|---|
 | **Sesgo de representación** | El dataset no incluye a todos los grupos que el modelo afectará |
 | **Sesgo histórico** | El dataset refleja decisiones injustas del pasado y el modelo las repite |
 | **Data Leakage** | Información que solo existe *después* del evento que se quiere predecir, filtrada al entrenamiento |
+:::
 
 ---
 # Referencias

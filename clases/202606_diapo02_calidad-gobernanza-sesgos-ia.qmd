@@ -25,6 +25,8 @@ format:
 <style>
 .smaller { font-size: 85%; }
 .tiny { font-size: 70%; }
+.reveal table { width: 100%; table-layout: fixed; }
+.reveal table th, .reveal table td { word-wrap: break-word; overflow-wrap: break-word; }
 </style>
 ```
 
@@ -53,7 +55,7 @@ library(fontawesome)
 
 ## Dimensiones de la calidad de datos
 
-::: smaller
+::: tiny
 | Dimensión | Descripción breve | Ejemplo |
 |---------------------------|----------------------------|------------------|
 | **Completitud** | Ausencia de valores faltantes | \% de clientes sin RUT o correo |
@@ -61,6 +63,8 @@ library(fontawesome)
 | **Consistencia** | Coherencia entre sistemas | Fecha nacimiento \<\> fecha afiliación |
 | **Actualización** | Vigencia de la información | Cliente activo con contacto obsoleto |
 :::
+
+---
 
 *Pregunta:* identificar un caso de baja calidad en datos internos o de clientes, por ejemplo, en la industria financiera.
 
