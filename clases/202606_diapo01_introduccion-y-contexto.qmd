@@ -45,7 +45,7 @@ library(knitr)
 | **1** | 20 min | Contexto y motivación |
 | **2** | 35 min | Decision Science |
 | **3** | 20 min | Framework organizacional |
-| **4** | 45 min | Enemigos silenciosos de los datos + Actividad (15 min) |
+| **4** | 30 min | Enemigos silenciosos de los datos |
 :::
 
 ---
@@ -98,6 +98,14 @@ library(knitr)
   - Baja adopción de modelos por parte del negocio.
 - Conclusión: ser data-driven requiere **procesos, cultura y diseño**, no solo modelos.
 
+:::
+
+---
+
+## `r fa("comments", fill = "steelblue")` Pregunta
+
+:::tiny
+En su experiencia (laboral o como clientes): **¿qué institución les ha sorprendido por usar bien los datos, y cuál por usarlos mal?**
 :::
 
 ---
@@ -197,6 +205,14 @@ Incluso con modelos y datos perfectos, los seres humanos tenemos sesgos que afec
 - **Anchoring bias:** nos quedamos anclados a un valor inicial (ej.: precio en un “cyber”).
 - **Loss aversion:** perder duele más que ganar lo mismo.
 - **Availability heuristic:** sobreestimamos eventos fáciles de recordar (accidentes aéreos).
+
+---
+
+## `r fa("comments", fill = "steelblue")` Pregunta
+
+:::tiny
+**¿A alguien le ha pasado el anchoring bias** comprando algo en un Cyber/Black Friday, **o el loss aversion** al no vender una acción que bajó de precio?
+:::
 
 ---
 
@@ -530,26 +546,6 @@ En producción:
 | ¿Datos limpios y monitoreados? | Adelante | Invertir antes de lanzar | No aprobar |
 
 **Criterio:** al menos 3 de 4 deben ser "Sí" o "Con riesgo + plan concreto".
-:::
-
----
-
-## `r fa("users", fill = "steelblue")` Actividad — Diagnóstico de Datos (15 min, sin herramientas)
-
-:::tiny
-Formen grupos. Piensen en su área o una institución financiera que conozcan y respondan, **en papel o conversando**, sin usar ninguna herramienta de IA:
-
-**1. ¿Qué datos generamos hoy que nunca capturamos como información útil?**
-   - Ej.: se registra que un cliente cerró su cuenta, pero no por qué lo hizo
-   - Ej.: se registra la aprobación de un crédito, pero no las razones del rechazo de los que no calificaron
-
-**2. ¿Quién no está representado en nuestros datos?**
-   - ¿Solo los clientes que ya compraron un producto? ¿No los que cotizaron y no compraron?
-   - ¿Solo zonas urbanas? ¿Qué pasa con zonas rurales o con menor historial bancario?
-
-**3. Si tuviéramos que auditar un modelo de crédito de nuestra institución, ¿cuál de los 3 enemigos (representación, histórico, leakage) creen que es más probable encontrar, y por qué?**
-
-Compartan sus respuestas con el resto del curso.
 :::
 
 ---

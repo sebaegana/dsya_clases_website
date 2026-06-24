@@ -312,7 +312,7 @@
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#estructura-de-la-sesión",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Estructura de la Sesión",
-    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n20 min\nContexto y motivación\n\n\n2\n35 min\nDecision Science\n\n\n3\n20 min\nFramework organizacional\n\n\n4\n45 min\nEnemigos silenciosos de los datos + Actividad (15 min)"
+    "text": "Estructura de la Sesión\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n20 min\nContexto y motivación\n\n\n2\n35 min\nDecision Science\n\n\n3\n20 min\nFramework organizacional\n\n\n4\n30 min\nEnemigos silenciosos de los datos"
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#contexto-actual",
@@ -334,6 +334,13 @@
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "¿Por qué es difícil ser data-driven?",
     "text": "¿Por qué es difícil ser data-driven?\n\n\nNo es un problema técnico: es un problema organizacional y cultural.\nObstáculos frecuentes:\n\nDatos dispersos, desordenados o sin gobierno.\nFalta de claridad en la decisión que se quiere mejorar.\nPoca alineación entre áreas (TI, riesgo, operaciones, finanzas).\nSesgos humanos que dominan la toma de decisiones.\nBaja adopción de modelos por parte del negocio.\n\nConclusión: ser data-driven requiere procesos, cultura y diseño, no solo modelos."
+  },
+  {
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#pregunta",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#pregunta",
+    "title": "Data Science y Analytics en Servicios Financieros",
+    "section": " Pregunta",
+    "text": "Pregunta\n\nEn su experiencia (laboral o como clientes): ¿qué institución les ha sorprendido por usar bien los datos, y cuál por usarlos mal?"
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#instituciones-basadas-en-datos",
@@ -362,6 +369,13 @@
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Sesgos más allá de los datos",
     "text": "Sesgos más allá de los datos\nIncluso con modelos y datos perfectos, los seres humanos tenemos sesgos que afectan la decisión:\n\nConfirmation bias: buscamos información que confirma lo que creemos.\nAnchoring bias: nos quedamos anclados a un valor inicial (ej.: precio en un “cyber”).\nLoss aversion: perder duele más que ganar lo mismo.\nAvailability heuristic: sobreestimamos eventos fáciles de recordar (accidentes aéreos)."
+  },
+  {
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#pregunta-1",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#pregunta-1",
+    "title": "Data Science y Analytics en Servicios Financieros",
+    "section": " Pregunta",
+    "text": "Pregunta\n\n¿A alguien le ha pasado el anchoring bias comprando algo en un Cyber/Black Friday, o el loss aversion al no vender una acción que bajó de precio?"
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#sobre-la-racionalidad-limitada",
@@ -453,13 +467,6 @@
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Cuadro de decisión",
     "text": "Cuadro de decisión\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nCon riesgo\nNo\n\n\n\n\n¿Grupos representados?\nAdelante\nLimitar alcance\nNo aprobar\n\n\n¿Histórico justo?\nAdelante\nAuditar y limpiar\nNo aprobar\n\n\n¿Sin leakage?\nAdelante\nRemover variables\nNo aprobar\n\n\n¿Datos limpios y monitoreados?\nAdelante\nInvertir antes de lanzar\nNo aprobar\n\n\n\nCriterio: al menos 3 de 4 deben ser “Sí” o “Con riesgo + plan concreto”."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#actividad-diagnóstico-de-datos-15-min-sin-herramientas",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#actividad-diagnóstico-de-datos-15-min-sin-herramientas",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": " Actividad — Diagnóstico de Datos (15 min, sin herramientas)",
-    "text": "Actividad — Diagnóstico de Datos (15 min, sin herramientas)\n\nFormen grupos. Piensen en su área o una institución financiera que conozcan y respondan, en papel o conversando, sin usar ninguna herramienta de IA:\n1. ¿Qué datos generamos hoy que nunca capturamos como información útil? - Ej.: se registra que un cliente cerró su cuenta, pero no por qué lo hizo - Ej.: se registra la aprobación de un crédito, pero no las razones del rechazo de los que no calificaron\n2. ¿Quién no está representado en nuestros datos? - ¿Solo los clientes que ya compraron un producto? ¿No los que cotizaron y no compraron? - ¿Solo zonas urbanas? ¿Qué pasa con zonas rurales o con menor historial bancario?\n3. Si tuviéramos que auditar un modelo de crédito de nuestra institución, ¿cuál de los 3 enemigos (representación, histórico, leakage) creen que es más probable encontrar, y por qué?\nCompartan sus respuestas con el resto del curso."
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#glosario-complemento",
@@ -718,7 +725,7 @@
     "href": "clases/diapo_01.html#resultado",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Resultado",
-    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 75.01\""
+    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 76.71\""
   },
   {
     "objectID": "clases/diapo_01.html#hipótesis-de-los-mercados-eficientes",
