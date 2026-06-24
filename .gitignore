@@ -6,3 +6,17 @@
 /.quarto/
 /_site/
 clases/imagenes/*.tif
+
+**/*.quarto_ipynb
+
+# Build byproducts from rendering an individual .qmd directly (outside `quarto render`
+# at the project root). The published output belongs in docs/ only.
+clases/*.html
+!clases/styles.html
+clases/*.pdf
+clases/*_files/
+clases/*.knit.md
+clases/*.utf8.md
+clases/*.tex
+clases/*.aux
+clases/*.log

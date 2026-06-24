@@ -308,6 +308,13 @@
     "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
   },
   {
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#estructura-de-la-sesión",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#estructura-de-la-sesión",
+    "title": "Data Science y Analytics en Servicios Financieros",
+    "section": "Estructura de la Sesión",
+    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n20 min\nContexto y motivación: por qué importan los datos y la IA hoy\n\n\n2\n35 min\nDecision Science: decisiones intuitivas vs. estructuradas, sesgos cognitivos\n\n\n3\n20 min\nFramework organizacional: Decision Stack, triaging y calidad de datos\n\n\n4\n45 min\nLos enemigos silenciosos de los datos + Actividad de diagnóstico (15 min)"
+  },
+  {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#contexto-actual",
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#contexto-actual",
     "title": "Data Science y Analytics en Servicios Financieros",
@@ -378,13 +385,6 @@
     "text": "Toda decisión es una predicción\nCada decisión —en salud, finanzas o negocios— implica una predicción:\n\nAprobar un crédito → predicción de pago/no pago.\n\nDeterminar un precio → predicción de demanda.\n\nAsignar un portafolio → predicción de retornos y riesgos.\n\nAceptar un trabajo → predicción de bienestar futuro."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#framework-de-trabajo",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#framework-de-trabajo",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Framework de trabajo",
-    "text": "Framework de trabajo\nEl enfoque de Decision Science propone un ciclo sistemático:\n\nDefinir el problema\n\n¿Qué decisión queremos mejorar?\n¿Qué significa “éxito” para negocio/riesgo/operaciones?\n\nReunir y analizar datos\n\nFuentes internas y externas.\nCalidad, disponibilidad, relevancia.\nPrimeras señales y patrones."
-  },
-  {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#the-decision-stack",
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#the-decision-stack",
     "title": "Data Science y Analytics en Servicios Financieros",
@@ -396,7 +396,7 @@
     "href": "clases/202606_diapo01_introduccion-y-contexto.html#triaging-y-calidad-de-datos",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Triaging y calidad de datos",
-    "text": "Triaging y calidad de datos\nDebemos partir por priorizar qué datos vale la pena usar, limpiar es integrar antes del proceso de analítico:\n¿Qué datos importan realmente?\n\n¿Son relevantes para la decisión?\n¿Representan el comportamiento actual?\n¿Se pueden usar legal y operacionalmente?"
+    "text": "Triaging y calidad de datos\nNo todos los datos valen la pena: hay que priorizar los que tengan impacto potencial, disponibilidad, costo razonable y alineación con la decisión — y validar que estén completos, vigentes y libres de outliers antes de usarlos.\n\nBuenos datos → buenos modelos → mejores decisiones. (Más adelante veremos qué falla cuando esto no se cumple.)"
   },
   {
     "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#por-qué-fallan-los-proyectos-data-driven",
@@ -406,249 +406,60 @@
     "text": "¿Por qué fallan los proyectos data-driven?\n\nLas causas más comunes:\n\n\n\n\n\n\n\nProblema\nDescripción\n\n\n\n\nProblema mal definido\nModelo construido sin una decisión clara asociada\n\n\nMétricas de éxito poco claras\nÉxito técnico no coincide con el éxito de negocio\n\n\nMala calidad de datos\nDatos desordenados, incompletos o irrelevantes\n\n\nDesconexión entre negocio y analytics\nPoco buy-in, alineación débil, expectativas poco realistas\n\n\nModelos que no se implementan\nQuedan en notebooks y no llegan a producción\n\n\nFalta de cultura de experimentación\nDecisiones que se toman “por costumbre”, sin evidencia\n\n\n\nRegla de oro: Un buen modelo vale cero si no cambia decisiones reales."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#fundamentos-estadísticos-esenciales",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#fundamentos-estadísticos-esenciales",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#más-allá-de-datos-sucios",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#más-allá-de-datos-sucios",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Fundamentos estadísticos esenciales",
-    "text": "Fundamentos estadísticos esenciales\nConceptos clave:\n\nTendencia central (media, mediana, moda)\nDispersión (varianza, desviación estándar)\nCorrelaciones entre variables\nIncertidumbre y variabilidad\n\nIdea central:\nLa estadística no busca certezas, sino cuantificar incertidumbre para tomar mejores decisiones."
+    "section": "Más allá de “datos sucios”",
+    "text": "Más allá de “datos sucios”\n\n“Mala calidad de datos” no es el único problema que hunde un proyecto\nHay fallas estructurales que pasan una revisión básica de calidad y aun así rompen un modelo\nNo son los sesgos cognitivos que vimos antes (esos viven en la cabeza de quien decide): estos viven dentro del dataset, incluso si nadie tiene intención de discriminar\nTres enemigos frecuentes, poco visibles para quien no es técnico:\n\n\n\n\n\n\n\n\n\nEnemigo\nEn una frase\n\n\n\n\nRepresentación\nFalta un grupo entero en los datos\n\n\nHistórico\nLos datos repiten decisiones injustas del pasado\n\n\nLeakage\nEl modelo “ve” información que no tendrá disponible en la realidad"
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#medidas-de-éxito",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#medidas-de-éxito",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-1-sesgo-de-representación",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-1-sesgo-de-representación",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Medidas de éxito",
-    "text": "Medidas de éxito\nUn proyecto de datos no es exitoso solo porque “el modelo funciona”. Antes de comenzar, se deben acordar criterios de éxito:\nDesempeño técnico\n\nAccuracy, AUC, precision, recall, MAE, RMSE.\n¿Qué métrica importa para la decisión?\n\nTiempo\n\n¿Llegó el modelo cuando el negocio lo necesitaba?"
+    "section": "Enemigo 1: Sesgo de Representación",
+    "text": "Enemigo 1: Sesgo de Representación\nDefinición: el dataset no representa a toda la población que el modelo afectará."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#promedio-varianza-y-correlación",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#promedio-varianza-y-correlación",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-2-sesgo-histórico",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-2-sesgo-histórico",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Promedio, varianza y correlación",
-    "text": "Promedio, varianza y correlación\nPromedio (media): Representa el “centro” de los datos.\nVarianza / Desviación estándar: Miden la variabilidad.\nCorrelación: Indica si dos variables se mueven juntas.\n⚠️ Cuidado:\nCorrelación no implica causalidad. Que dos series se muevan juntas no significa que una cause la otra."
+    "section": "Enemigo 2: Sesgo Histórico",
+    "text": "Enemigo 2: Sesgo Histórico\nDefinición: el modelo aprende de decisiones humanas del pasado — y si esas decisiones eran injustas, el modelo las repite a escala."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#utilización-de-datos",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#utilización-de-datos",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-3-data-leakage",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#enemigo-3-data-leakage",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Utilización de datos",
-    "text": "Utilización de datos"
+    "section": "Enemigo 3: Data Leakage",
+    "text": "Enemigo 3: Data Leakage\nDefinición: el modelo usa, durante el entrenamiento, información que no estará disponible en el momento real de predecir. Por eso parece perfecto en pruebas y falla en producción."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#latam-airlines-group-ltm.sn",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#latam-airlines-group-ltm.sn",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#gobernanza-en-acción-las-5-preguntas-antes-de-aprobar-un-proyecto-de-ia",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#gobernanza-en-acción-las-5-preguntas-antes-de-aprobar-un-proyecto-de-ia",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "LATAM Airlines Group (LTM.SN)",
-    "text": "LATAM Airlines Group (LTM.SN)"
+    "section": "Gobernanza en acción: las 5 preguntas antes de aprobar un proyecto de IA",
+    "text": "Gobernanza en acción: las 5 preguntas antes de aprobar un proyecto de IA\n\n\n¿Quién está representado en estos datos? ¿Quién falta?\n¿Estos datos reflejan decisiones justas del pasado, o las repiten?\n¿Hay información aquí que no tendríamos disponible al momento de decidir?\n¿Qué tan limpia y confiable es esta data?\n¿Quién vigila el modelo una vez en producción, y qué pasa si falla?"
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#cómo-se-hace-ml-en-la-práctica",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#cómo-se-hace-ml-en-la-práctica",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#cuadro-de-decisión",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#cuadro-de-decisión",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "¿Cómo se hace ML en la práctica?",
-    "text": "¿Cómo se hace ML en la práctica?\n\n\nHacer una pregunta\n\nRecolectar y explorar datos\n\nLimpiar y transformar atributos\n\nSeleccionar algoritmos\n\nEntrenar modelos\n\nEvaluar resultados\n\nUsar las respuestas"
+    "section": "Cuadro de decisión",
+    "text": "Cuadro de decisión\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nCon riesgo\nNo\n\n\n\n\n¿Grupos representados?\nAdelante\nLimitar alcance\nNo aprobar\n\n\n¿Histórico justo?\nAdelante\nAuditar y limpiar\nNo aprobar\n\n\n¿Sin leakage?\nAdelante\nRemover variables\nNo aprobar\n\n\n¿Datos limpios y monitoreados?\nAdelante\nInvertir antes de lanzar\nNo aprobar\n\n\n\nCriterio: al menos 3 de 4 deben ser “Sí” o “Con riesgo + plan concreto”."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#precauciones-clave",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#precauciones-clave",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#actividad-diagnóstico-de-datos-15-min-sin-herramientas",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#actividad-diagnóstico-de-datos-15-min-sin-herramientas",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Precauciones clave",
-    "text": "Precauciones clave\n\nUmbrales de decisión importan más que la accuracy\n\nLa matriz de confusión define lo que cuesta equivocarse\n\nDecisiones deben basarse en beneficios y costos reales, no en métricas abstractas\nRegulación: crédito, salud, seguros → modelos deben ser explicables"
+    "section": " Actividad — Diagnóstico de Datos (15 min, sin herramientas)",
+    "text": "Actividad — Diagnóstico de Datos (15 min, sin herramientas)\n\nFormen grupos. Piensen en su área o una institución financiera que conozcan y respondan, en papel o conversando, sin usar ninguna herramienta de IA:\n1. ¿Qué datos generamos hoy que nunca capturamos como información útil? - Ej.: se registra que un cliente cerró su cuenta, pero no por qué lo hizo - Ej.: se registra la aprobación de un crédito, pero no las razones del rechazo de los que no calificaron\n2. ¿Quién no está representado en nuestros datos? - ¿Solo los clientes que ya compraron un producto? ¿No los que cotizaron y no compraron? - ¿Solo zonas urbanas? ¿Qué pasa con zonas rurales o con menor historial bancario?\n3. Si tuviéramos que auditar un modelo de crédito de nuestra institución, ¿cuál de los 3 enemigos (representación, histórico, leakage) creen que es más probable encontrar, y por qué?\nCompartan sus respuestas con el resto del curso."
   },
   {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#error-tipo-i-vs-tipo-ii",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#error-tipo-i-vs-tipo-ii",
+    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#glosario-complemento",
+    "href": "clases/202606_diapo01_introduccion-y-contexto.html#glosario-complemento",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Error Tipo I vs Tipo II",
-    "text": "Error Tipo I vs Tipo II\n\n\nFalso Positivo (Tipo I)\n- Detecta algo que no está\n- “¡Está embarazado!” (cuando no lo está)\n\n\n\n\n\n\nFalso Negativo (Tipo II)\n- No detecta algo que sí está\n- “No está embarazada” (cuando sí lo está)"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#chihuahua-o-cupcake",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#chihuahua-o-cupcake",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Chihuahua o Cupcake 🐶🧁",
-    "text": "Chihuahua o Cupcake 🐶🧁\n\n\nAlgunos patrones visuales engañan tanto a humanos como a modelos.\nLo “obvio” no siempre es obvio."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#detector-de-nieve",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#detector-de-nieve",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Detector de nieve ❄️😠",
-    "text": "Detector de nieve ❄️😠\n\n\nUn modelo entrenado solo con “fotos nevadas” aprende a detectar nieve, no perros.\nLos sesgos del dataset se traducen en errores sistemáticos."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#interpretabilidad-vs-exactitud",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#interpretabilidad-vs-exactitud",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Interpretabilidad vs Exactitud",
-    "text": "Interpretabilidad vs Exactitud\n\n\nMás exactitud suele implicar menos interpretabilidad.\nLa decisión depende del riesgo, regulación, y confianza del negocio."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#muestreo-entrenamiento-vs.-prueba",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#muestreo-entrenamiento-vs.-prueba",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Muestreo: Entrenamiento vs. Prueba",
-    "text": "Muestreo: Entrenamiento vs. Prueba\nLa división de los datos en Train Set y Test Set (típicamente 70% / 30%) es una herramienta fundamental para evaluar la capacidad real de generalización del modelo.\n¿Qué pasa si no dividimos?\n\nEl modelo se entrena y evalúa con los mismos datos.\n\nPuede aprender patrones verdaderos y también ruido.\n\nEn la práctica, “parece perfecto”… pero sólo dentro de su entrenamiento."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#machine-learning-no-siempre-es-accionable",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#machine-learning-no-siempre-es-accionable",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Machine Learning no siempre es accionable",
-    "text": "Machine Learning no siempre es accionable\n\n“Esencialmente, todos los modelos están equivocados… algunos sirven.”\n— G.E.P. Box\n\nNo todo modelo genera impacto:\n\npuede no implementarse\npuede no ser interpretable\npuede ser demasiado caro\npuede ser poco confiable"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#incertidumbre-y-confianza",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#incertidumbre-y-confianza",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Incertidumbre y confianza",
-    "text": "Incertidumbre y confianza\n\nMedir incertidumbrePor qué importa\n\n\n\nEn análisis de datos, la incertidumbre no se elimina, se cuantifica.\n\nToda predicción tiene un rango posible de resultados.\nUsamos:\n\nintervalos de confianza\ndesviaciones estándar\nbandas de predicción\ndistribuciones completas\n\n\n\n\n\n\n\nUna decisión robusta no se basa solo en “el número esperado”.\nSe basa en entender:\n\nqué tan incierto es el resultado\nqué tan sensible es a los supuestos\nqué tan grave es un error de predicción\n\n\n\nLa confianza no proviene de la certeza, sino de entender el riesgo."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#simulaciones-de-monte-carlo",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#simulaciones-de-monte-carlo",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Simulaciones de Monte Carlo",
-    "text": "Simulaciones de Monte Carlo\nUna simulación busca reproducir posibles futuros bajo incertidumbre.\n\n¿Cómo funciona?¿Para qué sirve?\n\n\n\nSe define un modelo (ventas, precios, costos, retornos…)\nSe asignan distribuciones a las variables inciertas.\nSe generan miles de escenarios con muestreo aleatorio.\nSe obtiene una distribución de resultados.\n\n\n\n\nEvaluar riesgo y probabilidad de pérdidas.\nAnalizar sensibilidad del negocio.\nComparar alternativas bajo incertidumbre.\nComprender “colas” y eventos extremos.\n\n\n\n\n\nNo predice un futuro, sino miles de futuros posibles."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#tipos-de-modelos",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#tipos-de-modelos",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Tipos de modelos",
-    "text": "Tipos de modelos\n\nModelos de regresiónModelos de clasificaciónClustering (no supervisado)\n\n\n\nVariable objetivo: numérica/continua\nEjemplos:\n\npredicción de precio de activo\nforecasting de demanda\nestimación de ingresos\n\n\n\n\n\nVariable objetivo: categórica/discreta\nEjemplos:\n\ndefault vs. no default\nfraude vs. no fraude\nchurn vs. no churn\n\n\n\n\n\nIdentifica grupos o patrones sin etiquetas\nEjemplos:\n\nsegmentación de clientes\npatrones de comportamiento transaccional"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#métricas-de-modelos",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#métricas-de-modelos",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Métricas de modelos",
-    "text": "Métricas de modelos\n\nClasificaciónRegresión\n\n\n\n\n\n\n\n\n\n\nMétrica\nDescripción\n\n\n\n\nAccuracy\nProporción de aciertos totales.\n\n\nPrecision\nProporción de los predichos positivos que eran realmente positivos.\n\n\nRecall\nProporción de los verdaderos positivos que fueron correctamente detectados.\n\n\nF1 Score\nMedia armónica entre precision y recall; balancea ambos.\n\n\nAUC-ROC\nCapacidad global del modelo para discriminar entre clases (área bajo la curva ROC).\n\n\n\n\n\n\n\n\n\nMétrica\nDescripción\n\n\n\n\nMAE\nError absoluto promedio.\n\n\nRMSE\nPenaliza más los errores grandes.\n\n\nMAPE\nError porcentual promedio.\n\n\nR²\nVarianza explicada (no siempre es una buena métrica)."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#matriz-de-confusión",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#matriz-de-confusión",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Matriz de confusión",
-    "text": "Matriz de confusión\nLa matriz de confusión resume el desempeño de un modelo de clasificación:\n\nTP: verdaderos positivos\n\nFP: falsos positivos\n\nFN: falsos negativos\n\nTN: verdaderos negativos\n\n\nElegir la métrica correcta depende del costo del error."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#en-detalle",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#en-detalle",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "En detalle",
-    "text": "En detalle\n\nLa precision importa cuando un falso positivo es muy costoso.\nEl recall importa cuando un falso negativo es lo más grave."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#ejemplos",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#ejemplos",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Ejemplos",
-    "text": "Ejemplos\n\nChurnSalud\n\n\n\n\n\n\n\n\n\n\n\n\nEtapa\nError más costoso\nMétrica clave\nExplicación\n\n\n\n\nScreening de churn\nFalso Negativo\nRecall\nPerder un cliente real suele ser muy costoso para el negocio.\n\n\nIntervención costosa (beneficios/bonos)\nFalso Positivo\nPrecision\nNo quieres gastar recursos en clientes que igual se quedarían.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnfermedad\nEtapa\nError más costoso\nMétrica clave\nExplicación\n\n\n\n\nCáncer\nDetección inicial\nFalso Negativo\nRecall\nDejar sin detectar un cáncer puede costar la vida.\n\n\nVIH\nScreening inicial\nFalso Negativo\nRecall\nNo detectar un caso aumenta contagio y agrava la salud.\n\n\nVIH\nConfirmatorio\nFalso Positivo\nPrecision\nDiagnóstico erróneo causa daño psicológico y social."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#aplicación-en-evaluación-de-proyectos",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#aplicación-en-evaluación-de-proyectos",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Aplicación en evaluación de proyectos",
-    "text": "Aplicación en evaluación de proyectos\nEn el caso de proyectos, podemos realizar un análisis de carácter estocástico, lo que implica asumir que alguna de las variables no es conocida pero sí que puede estar situada dentro de algunos parámetros.\n\nVeamos el siguiente ejemplo: Una empresa está evaluando la introducción de un nuevo producto y desea conocer la probabilidad que obtenga pérdidas. Para cumplir dicho propósito lo contrata a usted para construir un modelo financiero del negocio."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#resultado",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#resultado",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Resultado",
-    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 76.98\""
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#hipótesis-de-los-mercados-eficientes",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#hipótesis-de-los-mercados-eficientes",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Hipótesis de los Mercados Eficientes",
-    "text": "Hipótesis de los Mercados Eficientes\n\nLos mercados financieros procesan información constantemente:\nprecios, noticias, reportes, expectativas macro, señales técnicas.\nLa Hipótesis de los Mercados Eficientes (EMH) propone que los precios ya reflejan la información disponible.\nSin embargo:\n\nLa IA puede analizar grandes volúmenes de datos\ndetectar patrones no lineales,\nextraer señal de texto, imágenes y variables alternativas\n\n¿Puede la IA “ganarle al mercado”? La respuesta depende de qué tan eficiente sea el mercado.\nVisitar nof1.ai"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#emh-forma-débil",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#emh-forma-débil",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "EMH: Forma débil",
-    "text": "EMH: Forma débil\n\nLa forma débil sostiene que:\n\nLos precios actuales incorporan TODA la información histórica\n(precios, retornos, volumen).\n\nImplicancias:\n\nEl análisis técnico no debería generar retornos anormales persistentes.\nLos precios siguen un random walk.\nNo existe memoria temporal útil para predecir retornos futuros.\n\n\nEn la forma débil, la IA compite por micro-ineficiencias."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#emh-forma-semi-fuerte",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#emh-forma-semi-fuerte",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "EMH: Forma semi-fuerte",
-    "text": "EMH: Forma semi-fuerte\n\nLa forma semi-fuerte sostiene que:\n\nLos precios incorporan toda la información pública, como:\n\nnoticias\nreportes corporativos\nestados financieros\nindicadores macro\n\n\nPor lo tanto:\n\nNingún análisis basado en información pública debería generar alfa consistente.\n\n\nConclusión: ventaja informacional de corto plazo, no necesariamente un alfa sostenible."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#emh-forma-fuerte",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#emh-forma-fuerte",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "EMH: Forma fuerte",
-    "text": "EMH: Forma fuerte\n\nLa forma fuerte sostiene que:\n\nLos precios reflejan TODA la información, incluso la información privada (insider).\n\nImplicancias:\n\nNadie podría obtener retornos superiores de forma consistente\nIncluso información privilegiada estaría incorporada en el precio\nCasi cualquier ventaja desaparecería instantáneamente\n\nEvidencia empírica:\n\nCasos de insider trading demuestran que la forma fuerte NO se cumple\nHay filtraciones, anomalías y eventos previsibles de corto plazo\n\n\nEn mercados muy eficientes, la IA es más útil para “vigilar” que para “ganar”."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#ia-y-eficiencia-de-mercado",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#ia-y-eficiencia-de-mercado",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "IA y eficiencia de mercado",
-    "text": "IA y eficiencia de mercado\nEn la práctica:\n\nLa IA mejora la velocidad de procesamiento.\nReduce la fricción informacional.\nPermite extraer señales de datos alternativos:\n\nimágenes satelitales\ntráfico marítimo\nsensores\ndatos de movilidad\ncomportamiento digital"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#qué-es-la-ia-generativa",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#qué-es-la-ia-generativa",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "¿Qué es la IA Generativa?",
-    "text": "¿Qué es la IA Generativa?\n\nIA (Artificial Intelligence): Sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.\nIA Generativa: Modelos capaces de crear contenido nuevo — texto, imágenes, audio, video, código — a partir de patrones aprendidos.\nLa IA generativa predice patrones para producir contenido original, no los copia.\n\nIA y algoritmos:\n\nLos algoritmos clásicos siguen reglas fijas.\n\nEn IA, las reglas son aprendidas por el modelo y pueden mejorar con más datos."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#innovaciones-clave-en-la-historia-de-la-ia",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#innovaciones-clave-en-la-historia-de-la-ia",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Innovaciones clave en la historia de la IA",
-    "text": "Innovaciones clave en la historia de la IA\n\n\n\n\nCloud computing\n→ Datos + cómputo a escala global.\nGANs\n→ Imágenes fotorrealistas.\nVer ejemplo\nTransformers\n→ Comprensión profunda del lenguaje.\nPaper original\nRLHF\n→ Modelos ajustados con retroalimentación humana.\nMidjourney / Stable Diffusion / GPT-4\n→ Multimodalidad y creatividad avanzada.\n\n\n\n\n\n\nRecuperado de: Curso Generative AI for Business, DataCamp"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#la-ia-no-es-un-modelo-es-un-ecosistema",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#la-ia-no-es-un-modelo-es-un-ecosistema",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "🤖 La IA no es un modelo — es un ecosistema",
-    "text": "🤖 La IA no es un modelo — es un ecosistema\nUn LLM (GPT, Claude, Llama) es solo una parte del sistema.\nPara responder una consulta compleja, se coordinan múltiples componentes:\n\n\nComputer Vision: detecta objetos/escenas en imágenes.\n\nOCR: extrae texto de imágenes y PDFs.\n\nSpeech Recognition / TTS: transforma audio en texto y viceversa.\n\nLLM: interpreta y genera respuestas en lenguaje natural.\n\nOrchestration Layer: decide qué módulos usar y en qué orden."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#qué-es-un-llm",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#qué-es-un-llm",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "¿Qué es un LLM?",
-    "text": "¿Qué es un LLM?\n\nUn Large Language Model es un modelo entrenado con enormes cantidades de texto para:\n\npredecir la siguiente palabra,\n\ngenerar contenido coherente,\n\ncomprender contextos complejos,\n\nproducir texto, código, explicaciones,\n\nrazonar de manera estadística.\n\nUn LLM no “entiende” el mundo, modela patrones del lenguaje para generar la respuesta más probable."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#experimentación-en-organizaciones",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#experimentación-en-organizaciones",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Experimentación en organizaciones",
-    "text": "Experimentación en organizaciones\n\nLa experimentación es un pilar del enfoque Decision Science\nSegún Harvard Business Review:\n\nLas decisiones estratégicas mejoran cuando se prueban hipótesis\nLas organizaciones exitosas experimentan continuamente:\n\nnuevos precios\nnuevas políticas\nnuevas interfaces\nnuevas estrategias de riesgo\nnuevos modelos\n\n\n\nSi no experimentas, adivinas. La evidencia supera la intuición"
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#por-qué-experimentamos-ejemplos-ilustrativos",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#por-qué-experimentamos-ejemplos-ilustrativos",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Por qué experimentamos: ejemplos ilustrativos",
-    "text": "Por qué experimentamos: ejemplos ilustrativos\nEpigenética en ratones 🐭\n\nLos cambios observados no se deben a mutaciones,\nsino a modificaciones heredables de expresión genética.\n¿Por qué usar ratones?\n→ Permiten experimentación rápida, controlada y repetible.\nLección: para entender un sistema complejo, hay que experimentar."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#nasa-vs.-spacex",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#nasa-vs.-spacex",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "NASA vs. SpaceX 🚀",
-    "text": "NASA vs. SpaceX 🚀\n\nNASA: diseño orientado a minimizar el riesgo antes del vuelo.\n→ Costos extremadamente altos.\nSpaceX: filosofía de iterar rápido, fallar barato, aprender. → Costo por lanzamiento ~67M vs. &gt;4B del SLS (Space launch system).\nLa innovación requiere un ciclo prueba → error → ajuste → repetición."
-  },
-  {
-    "objectID": "clases/202606_diapo01_introduccion-y-contexto.html#cultura-test-and-learn",
-    "href": "clases/202606_diapo01_introduccion-y-contexto.html#cultura-test-and-learn",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Cultura test-and-learn",
-    "text": "Cultura test-and-learn\n\nUna cultura de experimentación incluye:\n\n\n\n\n\n\n\nEtapa\nElementos clave\n\n\n\n\nHipótesis claras\n¿Qué queremos probar? ¿qué variable queremos mover?\n\n\nExperimentos controlados\nPilotos, grupos de control, pruebas A/B\n\n\nMedición rigurosa\nDefinir métricas antes del experimento, analizar efecto causal y no solo correlaciones\n\n\nAprendizaje estructurado\nDocumentar resultados, ajustar políticas y modelos\n\n\n\n\nLa experimentación convierte organizaciones rígidas en organizaciones adaptativas."
+    "section": "Glosario (complemento)",
+    "text": "Glosario (complemento)\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nSesgo de representación\nEl dataset no incluye a todos los grupos que el modelo afectará\n\n\nSesgo histórico\nEl dataset refleja decisiones injustas del pasado y el modelo las repite\n\n\nData Leakage\nInformación que solo existe después del evento que se quiere predecir, filtrada al entrenamiento"
   },
   {
     "objectID": "clases/diapo_01.html#contexto-actual",
@@ -900,7 +711,7 @@
     "href": "clases/diapo_01.html#resultado",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Resultado",
-    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.32\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 75.81\""
+    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 77.4\""
   },
   {
     "objectID": "clases/diapo_01.html#hipótesis-de-los-mercados-eficientes",
