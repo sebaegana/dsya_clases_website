@@ -2,7 +2,7 @@
 listing_title: "Diapositiva 02 (2026-06)"
 pdf: "202606_diapo02_calidad-gobernanza-sesgos-ia.pdf"
 title: "Data Science y Analytics en Servicios Financieros"
-subtitle: "Clase 02 – Calidad, Gobernanza y Sesgos en IA"
+subtitle: "Clase 02 – Modelos, Calidad e Interpretación"
 institution: 'Lorem ipsum'
 lang: es
 date: today
@@ -11,27 +11,21 @@ format:
     theme: simple
     slide-number: true
     self-contained: true
-    incremental: true
-    transition: slide
+    incremental: false
+    transition: fade
     logo: "imagenes/logo_db.png"
     footer: "© Sebastián Egaña Santibáñez"
+    include-in-header: styles.html
   pdf:
     toc: false
     papersize: a4
     geometry: margin=1in
 ---
 
-```{=html}
-<style>
-.smaller { font-size: 85%; }
-.tiny { font-size: 70%; }
-.reveal table { width: 100%; table-layout: fixed; }
-.reveal table th, .reveal table td { word-wrap: break-word; overflow-wrap: break-word; }
-</style>
-```
-
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
 library(fontawesome)
+library(tidyverse)
+library(knitr)
 ```
 
 # Enlaces
@@ -41,263 +35,304 @@ library(fontawesome)
 -   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/>
 -   `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
 
-------------------------------------------------------------------------
+---
 
-# Calidad y gobernanza de los datos
-
-## ¿Por qué importa la calidad de los datos?
-
--   El **valor estratégico** de la información depende de su **calidad y gobernanza**
--   Decisiones erróneas → modelos ineficientes → pérdida de confianza.
--   *“Garbage in, garbage out”* – ningún algoritmo corrige datos defectuosos
-
-------------------------------------------------------------------------
-
-## Dimensiones de la calidad de datos
+## Estructura de la Sesión
 
 ::: tiny
-| Dimensión | Descripción breve | Ejemplo |
-|---------------------------|----------------------------|------------------|
-| **Completitud** | Ausencia de valores faltantes | \% de clientes sin RUT o correo |
-| **Exactitud** | Concordancia con la realidad | Dirección o edad correcta |
-| **Consistencia** | Coherencia entre sistemas | Fecha nacimiento \<\> fecha afiliación |
-| **Actualización** | Vigencia de la información | Cliente activo con contacto obsoleto |
+| Bloque | Duración | Contenido |
+|---|---|---|
+| **1** | 20 min | De los datos a los modelos |
+| **2** | 20 min | Calidad de datos: las 4 dimensiones |
+| **3** | 20 min | Interpretación de resultados |
+| **4** | 10 min | Cierre |
 :::
 
 ---
 
-*Pregunta:* identificar un caso de baja calidad en datos internos o de clientes, por ejemplo, en la industria financiera.
+# Bloque 1: De los datos a los modelos
 
-------------------------------------------------------------------------
+---
 
-## Riesgos de decisiones con datos de mala calidad
+## Puente desde la Clase 01
 
--   **Operativos:** reprocesos, errores en informes, baja productividad\
--   **Financieros:** decisiones de inversión o riesgo erradas
--   **Reputacionales:** pérdida de confianza del cliente o del regulador\
--   **Analíticos:** modelos con sesgos o predicciones inconsistentes
+:::tiny
+En la clase anterior establecimos que **toda decisión es una predicción** y que los proyectos exitosos parten desde la decisión, no desde los datos.
 
-------------------------------------------------------------------------
+Hoy entramos al siguiente nivel: ¿qué hacen los modelos exactamente, cómo se construyen, y cómo se leen sus resultados sin ser técnico?
+:::
 
-## Gobernanza de datos
+---
 
-Conjunto de políticas, roles y procesos que aseguran el uso responsable de los datos.
+## ¿Qué hace un modelo?
 
--   Define **roles claros**: propietario, custodio, analista, consumidor
--   Establece **procesos** de validación, trazabilidad y acceso
--   Impulsa **alineamiento con estrategia** organizacional
+:::tiny
+| Tipo | Objetivo | Ejemplo en banca |
+|---|---|---|
+| **Descriptivo** | Explica qué ocurrió | Segmentación de clientes por comportamiento de pago |
+| **Predictivo** | Anticipa qué ocurrirá | Probabilidad de mora en los próximos 90 días |
+| **Prescriptivo** | Recomienda una acción | Sugerir el producto con mayor propensión de compra |
 
-🔗 *Ejemplo:* catálogo de datos, control de acceso y políticas de retención.
+**Idea clave:** la mayoría de los proyectos de analytics en servicios financieros son predictivos. El prescriptivo es el paso siguiente — y el más difícil de implementar.
+:::
 
-------------------------------------------------------------------------
+---
 
-## Ética y compliance en el uso de datos
+## La IA no es un modelo — es un ecosistema
 
--   **Responsabilidad:** tratar los datos como un activo compartido\
--   **Privacidad:** cumplir normativas (LGPD, GDPR, Ley 19.628 en Chile)\
--   **Transparencia:** explicar decisiones automatizadas
--   **Equidad:** evitar sesgos en IA o analítica predictiva
-
-------------------------------------------------------------------------
-
-## 🚀 Cierre y reflexión
-
--   La **calidad** asegura decisiones confiables.\
--   La **gobernanza** garantiza responsabilidad y cumplimiento.\
--   La **ética** construye confianza con clientes y sociedad.
-
-------------------------------------------------------------------------
-
-# Introducción a la IA y sus principios básicos
-
-------------------------------------------------------------------------
-
-## ¿Qué es (y qué no es) Inteligencia Artificial?
-
--   **IA:** capacidad de sistemas para aprender patrones y tomar decisiones basadas en datos
--   **No es:** magia ni conciencia, sino algoritmos que **aprenden de ejemplos**\
--   Se basa en **estadística, aprendizaje automático y automatización**
-
-*Ejemplo:* un modelo que predice abandono de clientes no “piensa”, solo identifica patrones históricos.
-
-------------------------------------------------------------------------
-
-![Recuperado en: https://www.orsys.fr/orsys-lemag/es/aprendizaje-automatico-aprendizaje-profundo-ia-diferencias](imagenes/ia_ml.png)
-
-------------------------------------------------------------------------
-
-## 🤖 La IA no es un modelo — es un ecosistema de componentes
-
+:::tiny
 Un **LLM** (Large Language Model) como GPT o Claude es solo una parte del sistema.
 
-Para responder una consulta compleja, se articulan **varios segmentos de IA**:
+Para responder una consulta compleja, se articulan varios componentes:
 
-::: tiny
--   **Computer Vision** → detecta y analiza imágenes (objetos, rostros, escenas).\
--   **OCR (Reconocimiento Óptico de Caracteres)** → extrae texto de imágenes o PDFs.\
--   **Speech Recognition / TTS** → convierte audio en texto y viceversa.\
--   **LLM** → interpreta, contextualiza y genera una respuesta en lenguaje natural.\
--   **Reasoning / Orchestration Layer** → decide qué componentes usar y en qué orden.
+- **Computer Vision** → detecta y analiza imágenes (objetos, documentos, rostros)
+- **OCR** → extrae texto de imágenes o PDFs
+- **Speech Recognition / TTS** → convierte audio en texto y viceversa
+- **LLM** → interpreta, contextualiza y genera respuesta en lenguaje natural
+- **Reasoning / Orchestration Layer** → decide qué componentes usar y en qué orden
 :::
 
-------------------------------------------------------------------------
+---
 
-## Ejemplo
+## Ejemplo: "sube una foto de un contrato y pregunta de qué trata"
 
-::: tiny
-“Subo una foto de un contrato y pregunto de qué trata”
-
-| Etapa | Segmento de IA | Función | Ejemplo de salida |
-|----------------|--------------------|----------------|----------------------|
-| 1 | **Computer Vision** | Detecta texto y no una persona o paisaje. | “Documento detectado” |
-| 2 | **OCR** | Extrae texto | “Contrato de prestación de servicios...” |
-| 3 | **LLM** | Interpreta, resume cláusulas, responde preguntas. | “Este contrato regula la relación entre la empresa y un proveedor.” |
-| 4 | **Orquestador** | Coordina | Decide usar OCR → LLM |
+:::tiny
+| Etapa | Componente | Función | Salida |
+|---|---|---|---|
+| 1 | **Computer Vision** | Detecta que es un documento, no una foto | "Documento detectado" |
+| 2 | **OCR** | Extrae el texto | "Contrato de prestación de servicios..." |
+| 3 | **LLM** | Interpreta y resume cláusulas | "Este contrato regula la relación entre X e Y" |
+| 4 | **Orquestador** | Coordina el flujo | Decide: OCR → LLM |
 :::
 
-------------------------------------------------------------------------
+---
 
-::: {=html}
 ```{=html}
-<pre style="font-size:1em; line-height:1;">
-📷 Imagen ──▶ 🧠 Computer Vision
-           │
-           ▼
-      🧾 OCR (Texto extraído)
-           │
-           ▼
-      💬 LLM (Comprensión y respuesta)
-           │
-           ▼
-      🧭 Respuesta contextual en lenguaje natural
+<pre style="font-size:0.9em; line-height:1.5;">
+📷 Imagen
+    │
+    ▼
+🧠 Computer Vision  →  "es un documento"
+    │
+    ▼
+🧾 OCR  →  texto extraído
+    │
+    ▼
+💬 LLM  →  comprensión y respuesta
+    │
+    ▼
+🧭 Respuesta en lenguaje natural
 </pre>
 ```
+
+---
+
+## `r fa("comments", fill = "steelblue")` Pregunta
+
+:::tiny
+**¿Qué proceso de su área podría beneficiarse de alguno de estos componentes?**
+
+Piensen en tareas repetitivas que involucran documentos, imágenes, audio, o texto no estructurado.
 :::
 
--   Resultado: “El documento corresponde a un contrato de servicios con fecha de inicio 2024-01-10 entre X y Y.”
+---
 
-------------------------------------------------------------------------
+# Bloque 2: Calidad de datos — las 4 dimensiones
 
-## Modelos descriptivos vs. predictivos
+---
 
-| Tipo de modelo | Objetivo | Ejemplo ejecutivo |
-|-------------------------|------------------|-----------------------------|
-| **Descriptivo** | Explica qué ocurrió | Segmentación de clientes por comportamiento |
-| **Predictivo** | Anticipa qué ocurrirá | Predicción de egreso o mora |
-| **Prescriptivo** | Recomienda acciones | Sugerir la mejor oferta según propensión |
+## Más allá de "datos sucios"
 
-------------------------------------------------------------------------
+:::tiny
+En la Clase 01 vimos que los **enemigos silenciosos** (representación, histórico, leakage) son problemas estructurales que pasan una revisión básica de calidad.
 
-# Interpretación de resultados de IA
+Pero también existe una capa más operacional: **las dimensiones de calidad** que afectan el día a día de cualquier proyecto de datos.
 
-## Qué significa un “resultado confiable”
+La diferencia:
+- Los enemigos silenciosos **rompen el modelo**
+- Las dimensiones de calidad **erosionan la confianza** en los resultados
+:::
 
--   Un modelo **no entrega certezas**, entrega **probabilidades**
--   La confiabilidad depende de calidad de datos, validación del model, comparación entre predicciones y realidad
--   Ejemplo: *modelo de churn predice 80% → no dice “renunciará”, sino “probabilidad alta de egreso”*
+---
 
-------------------------------------------------------------------------
+## Las 4 dimensiones de calidad
+
+:::tiny
+| Dimensión | Descripción | Ejemplo en banca |
+|---|---|---|
+| **Completitud** | Sin valores faltantes | % de clientes sin RUT, correo o fecha de nacimiento |
+| **Exactitud** | Concordancia con la realidad | Dirección o ingreso declarado vs. realidad |
+| **Consistencia** | Coherencia entre sistemas | Fecha de nacimiento distinta en core bancario y CRM |
+| **Actualización** | Vigencia de la información | Cliente activo con teléfono de contacto obsoleto |
+:::
+
+---
+
+## `r fa("comments", fill = "steelblue")` Pregunta
+
+:::tiny
+**¿Cuál de estas cuatro dimensiones es el problema más frecuente en su área o empresa?**
+
+¿Tienen algún proceso hoy para detectarlo o medirlo?
+:::
+
+---
+
+## Riesgos concretos por tipo de falla
+
+:::tiny
+| Dimensión | Riesgo operativo | Riesgo analítico |
+|---|---|---|
+| **Completitud** | Campañas que no llegan al cliente | Modelos entrenados con registros incompletos |
+| **Exactitud** | Envíos a dirección incorrecta | Variables de entrada que no representan la realidad |
+| **Consistencia** | Reportes con cifras distintas según la fuente | Joins incorrectos entre tablas, duplicados |
+| **Actualización** | Gestión de cobranza a contacto equivocado | Modelo entrenado con datos que ya no reflejan el comportamiento actual |
+:::
+
+---
+
+## Gobernanza: quién hace qué
+
+:::tiny
+La gobernanza no es un comité — es un sistema de **roles, procesos y responsabilidades** que asegura que los datos lleguen limpios, a tiempo y con trazabilidad.
+
+| Rol | Responsabilidad |
+|---|---|
+| **Propietario del dato** | Define qué significa cada campo y quién puede usarlo |
+| **Custodio** | Asegura el almacenamiento, acceso y seguridad |
+| **Analista / Consumidor** | Usa los datos; reporta problemas de calidad |
+
+**Sin propietario claro → nadie corrige → el problema escala.**
+:::
+
+---
+
+## Procesos de gobernanza en la práctica
+
+:::tiny
+- **Catálogo de datos:** inventario de qué existe, dónde vive, qué significa cada campo
+- **Linaje de datos:** trazabilidad desde el origen hasta el modelo o reporte final
+- **Control de acceso:** quién puede ver, modificar o exportar cada dataset
+- **Política de retención:** cuánto tiempo se guardan datos y bajo qué normativa
+
+> Sin estos procesos, una auditoría de la CMF o un incidente de seguridad exponen al banco a riesgo legal y reputacional significativo.
+:::
+
+---
+
+# Bloque 3: Interpretación de resultados
+
+---
+
+## ¿Qué significa un resultado confiable?
+
+:::tiny
+- Un modelo **no entrega certezas** — entrega **probabilidades**
+- La confiabilidad depende de tres factores:
+  1. Calidad de los datos de entrada
+  2. Validación del modelo (¿se probó con datos que no vio?)
+  3. Estabilidad en el tiempo (¿sigue funcionando igual 6 meses después?)
+
+**Ejemplo:** un modelo de churn predice 80% → no dice "este cliente se irá", sino "hay alta probabilidad de egreso según los patrones históricos".
+:::
+
+---
 
 ## Predicción y margen de error
 
-> Todo modelo tiene un grado de error aceptable según su propósito.
+:::tiny
+Todo modelo tiene un grado de error aceptable según su propósito.
 
--   Se mide con indicadores: *precisión, recall, etc.*
--   En contexto ejecutivo → “¿Cuánto confío en este resultado para tomar una decisión?”
+| Métrica | Qué mide | Cuándo importa más |
+|---|---|---|
+| **Precisión** | De los que predijo positivo, ¿cuántos realmente lo eran? | Cuando el costo de un falso positivo es alto |
+| **Recall** | De los positivos reales, ¿cuántos detectó? | Cuando el costo de perder un caso es alto |
+| **AUC-ROC** | Capacidad discriminatoria general del modelo | Comparación entre modelos |
 
-Por ejemplo un 90% de precisión puede ser excelente en marketing, pero insuficiente en salud.
+Un 90% de precisión puede ser excelente en marketing y **completamente insuficiente en detección de fraude**.
+:::
 
-------------------------------------------------------------------------
+---
 
-## Overfitting explicado de forma ejecutiva
-
-> “Cuando el modelo aprende de memoria el pasado y no sabe generalizar al futuro.”
+## Overfitting: cuando el modelo aprende de memoria
 
 :::smaller
--   Se ajusta tanto a los datos históricos que pierde capacidad predictiva
--   Síntomas: Resultados casi perfectos en entrenamiento y mal desempeño con nuevos datos
--   Solución: validación cruzada, regularización, simplicidad del modelo
+> "El modelo memorizó el pasado pero no aprendió a generalizar."
 
-📉 *Ejemplo:* modelo que predice bien a clientes antiguos pero falla en nuevos afiliados.
+- Se ajusta tanto a los datos históricos que pierde capacidad predictiva con datos nuevos
+- **Síntoma más común:** precisión casi perfecta en entrenamiento (98%) y mediocre en producción (71%)
+- **Causa frecuente:** demasiadas variables, modelo demasiado complejo, dataset pequeño
+
+**Analogía:** un alumno que memoriza las respuestas del ensayo anterior y reprueba el examen real.
 :::
 
-------------------------------------------------------------------------
+---
 
-# Sesgos en los datos y modelos
-
-## Tipos de sesgos
-
-| Tipo            | Descripción                       | Ejemplo                 |
-|-----------------|--------------------------------|-----------------------|
-| **Muestreo**    | Datos no representan la población | Solo clientes activos   |
-| **Histórico**   | Refleja desigualdades pasadas     | Sesgos en género o edad |
-| **De medición** | Error en cómo se capturan datos   | Encuestas incompletas   |
-
-------------------------------------------------------------------------
-
-## Ejemplos de sesgos y consecuencias
-
--   **Reclutamiento automatizado:** modelos que excluyen perfiles femeninos por datos históricos
--   **Crédito:** mayor probabilidad de rechazo en comunas con bajo historial financiero
--   **Salud:** subrepresentación de grupos etarios o regiones
-
-*Impacto estratégico:* decisiones injustas → daño reputacional → pérdida de confianza → riesgo legal.
-
-------------------------------------------------------------------------
-
-## Cómo mitigar sesgos desde la gestión
-
--   Diversificar fuentes de datos
--   Monitorear resultados por grupo o segmento
--   Revisar métricas éticas además de métricas de performance
--   Incluir equipos interdisciplinarios en revisión de modelos
-
-------------------------------------------------------------------------
-
-# 💼 Aplicación práctica: decisiones informadas con IA 
-
-## Actividad grupal – Interpretando resultados de IA
-
-**Caso:**\
+## Ética y compliance
 
 :::tiny
-Una AFP aplica un modelo de IA para predecir egresos de afiliados. El modelo entrega una **probabilidad de egreso del 75%** para un cliente de alto saldo. Los costos de retención estimados: **\$20.000 CLP por cliente**. Los costos de pérdida si egresa: **\$250.000 CLP.**
+El uso de datos y modelos no es solo un problema técnico — tiene implicancias **legales y reputacionales**.
+
+| Marco | Alcance | Relevancia para banca chilena |
+|---|---|---|
+| **Ley 19.628** | Chile — protección de datos personales | Consentimiento para uso de datos de clientes |
+| **GDPR** | Unión Europea | Aplica si el banco opera o tiene clientes en Europa |
+| **LGPD** | Brasil — similar al GDPR | Relevante para bancos con operaciones en Brasil |
+
+**Principios transversales:** consentimiento informado, derecho al olvido, explicabilidad de decisiones automatizadas, no discriminación.
+
+> Un modelo que discrimina por género o zona geográfica puede cumplir técnicamente con las métricas y aun así ser ilegal.
 :::
+
+---
+
+## `r fa("comments", fill = "steelblue")` Pregunta
 
 :::tiny
-Instrucciones (20 min)
+**¿Su organización tiene un proceso para revisar si un modelo discrimina antes de ponerlo en producción?**
 
-En grupos, respondan:
-
-1. ¿Vale la pena intervenir al cliente?
-2. ¿Qué información adicional pedirían antes de decidir?
-3. ¿Qué riesgo asumen si el modelo se equivoca?
-
-Compartir sus reflexiones.
+¿Quién toma esa decisión — el equipo técnico, el área legal, el directorio?
 :::
 
-------------------------------------------------------------------------
+---
 
-## Checklist ejecutivo para líderes
+# Bloque 4: Cierre
 
-- ✅ Validar calidad de los datos usados.
-- ✅ Exigir interpretación comprensible de los resultados.
-- ✅ Evaluar sesgos potenciales y su impacto.
-- ✅ Considerar el costo del error (falso positivo/negativo).
-- ✅ Promover decisiones basadas en evidencia, no en intuición.
+---
 
-------------------------------------------------------------------------
+## Checklist para líderes
 
-## 🧭 Cierre
+:::tiny
+Antes de aprobar el uso de un modelo en producción:
 
-> La Inteligencia Artificial **no reemplaza el juicio humano**, lo potencia.
+- ¿Los datos usados tienen buena calidad en las 4 dimensiones?
+- ¿El modelo fue validado con datos que no vio durante el entrenamiento?
+- ¿Se midió el error en distintos segmentos (edad, género, zona)?
+- ¿Se consideró el costo asimétrico del error (falso positivo vs. falso negativo)?
+- ¿El resultado es explicable a un cliente o al regulador si lo pide?
+- ¿Hay un proceso de monitoreo después del lanzamiento?
+:::
 
--   Entender sus **principios, límites y sesgos** es clave para liderar con responsabilidad.
+---
 
-------------------------------------------------------------------------
+## Cierre
+
+> La Inteligencia Artificial **no reemplaza el juicio humano** — lo potencia.
+
+:::tiny
+- Entender **qué hace un modelo** permite hacer mejores preguntas al equipo técnico
+- Conocer las **dimensiones de calidad** permite detectar problemas antes de que rompan un proyecto
+- Leer **resultados con criterio** — probabilidades, márgenes de error, costos asimétricos — es la habilidad diferenciadora del líder data-driven
+:::
+
+---
 
 # Referencias
 
-::: tiny
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L. & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30. <https://arxiv.org/pdf/1706.03762>
+:::tiny
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L. & Polosukhin, I. (2017). Attention is all you need. *Advances in neural information processing systems*, 30. <https://arxiv.org/pdf/1706.03762>
+
+European Parliament. (2016). General Data Protection Regulation (GDPR). <https://gdpr-info.eu>
+
+Biblioteca del Congreso Nacional de Chile. (1999). Ley 19.628 sobre protección de la vida privada. <https://www.bcn.cl/leychile/navegar?idNorma=141599>
 :::

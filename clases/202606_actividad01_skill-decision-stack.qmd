@@ -1,0 +1,108 @@
+---
+title: "Skill de Auditoría con el Decision Stack"
+subtitle: "Actividad 01 — Data Science y Analytics en Servicios Financieros"
+author: "Sebastián Egaña Santibáñez"
+lang: es
+date: today
+format:
+  pdf:
+    toc: false
+    papersize: a4
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    linestretch: 1.3
+---
+
+Actividad en dos partes: primero evalúas el escenario con tu propio criterio, luego lo auditas con un LLM usando un prompt estructurado. Al final comparamos ambos resultados. **Tiempo total:** \~15 minutos.
+
+## El escenario
+
+```
+Proyecto: Modelo de Predicción de Incumplimiento de Créditos
+Institución: BancoRetail S.A. (banco de consumo, ~800.000 clientes activos)
+Área responsable: Gerencia de Riesgo, con apoyo del equipo de Analytics
+
+Objetivo declarado: predecir qué clientes dejarán de pagar sus cuotas
+en los próximos 90 días, para activar cobranza preventiva.
+
+Datos utilizados:
+- Fuente: historial interno de créditos de consumo (2019-2024)
+- Solo se incluyeron créditos que fueron aprobados en ese período
+- Variables: monto, plazo, tasa, cuotas pagadas, días de atraso máximo,
+  ¿fue castigado contablemente?
+- Muestra de entrenamiento: 120.000 operaciones
+
+Modelo: XGBoost. Métrica en pruebas: 94% de precisión (accuracy).
+Validación: split 80/20 aleatorio sobre el mismo dataset.
+
+Estado: listo para producción la próxima semana.
+Reemplazará el modelo de cobranza vigente (basado en reglas).
+No hubo validación externa ni revisión de Riesgo Operacional.
+```
+
+## Parte 1 — Evaluación propia (sin LLM)
+
+Lee el escenario y anota tu diagnóstico usando el Decision Stack. Para cada nivel indica si está bien definido, ausente o es riesgoso.
+
+| Nivel | ¿Bien definido? | Riesgo que identificas |
+|:---|:---:|:---|
+| Decision | | |
+| Objective | | |
+| Alternatives | | |
+| Uncertainty | | |
+| Models | | |
+| Data | | |
+| Action | | |
+
+: {tbl-colwidths="[20,20,60]"}
+
+**¿Aprobarías este proyecto para producción?** Sí / No / Con condiciones
+
+**¿Por qué?**
+
+\vspace{2cm}
+
+## Parte 2 — Evaluación con skill (con LLM)
+
+Abre el LLM que prefieras —ChatGPT, Claude, Gemini— y pega el siguiente prompt reemplazando `[escenario]` con el texto de arriba:
+
+```
+Actúa como consultor de Decision Science especializado en banca.
+
+El Decision Stack es un framework de 7 niveles para auditar proyectos
+de datos. Se aplica SIEMPRE desde arriba hacia abajo, empezando por
+la decisión:
+
+1. Decision    — ¿Qué decisión específica se quiere mejorar?
+2. Objective   — ¿Qué significa "mejor"? (retorno, riesgo, conversión)
+3. Alternatives— ¿Qué opciones se evaluaron además del modelo?
+4. Uncertainty — ¿Qué no se sabe? ¿Cómo se cuantifica?
+5. Models      — ¿Qué herramientas reducen esa incertidumbre?
+6. Data        — ¿Qué datos se usaron? ¿Representativos y sin leakage?
+7. Action      — ¿Cómo se implementa y monitorea en producción?
+
+Para cada nivel indica:
+  (1) qué está bien definido en el proyecto
+  (2) qué está ausente, es ambiguo o es riesgoso
+
+En el nivel Data evalúa explícitamente:
+  (a) ¿los datos representan a todos los grupos que el modelo afectará?
+  (b) ¿las decisiones históricas usadas para entrenar eran justas?
+  (c) ¿alguna variable solo existe después del evento que se predice?
+
+Presenta el análisis como tabla:
+  Nivel | Bien definido | Riesgo identificado | Estado (Verde / Amarillo / Rojo)
+
+Cierra con los 3 mayores riesgos y clasifica cada uno como:
+  bloqueante (no lanzar) / moderado (lanzar con plan) / menor (monitorear)
+
+No inventes información que no esté en el escenario.
+
+El proyecto es: [escenario]
+```
+
+## Debrief
+
+1. ¿Qué riesgos identificó el LLM que tú no habías visto en la Parte 1?
+2. ¿Qué viste tú que el LLM no vio, o vio mal?
+3. ¿Cambiarías algo del prompt para obtener un mejor diagnóstico?

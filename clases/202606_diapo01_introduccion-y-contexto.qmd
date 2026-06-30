@@ -12,7 +12,7 @@ format:
     slide-number: true
     self-contained: true
     incremental: false
-    transition: slide
+    transition: fade
     logo: "imagenes/logo_db.png"
     footer: "© Sebastián Egaña Santibáñez"
     include-in-header: styles.html

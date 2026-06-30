@@ -168,137 +168,137 @@
     "text": "🧭 Cierre\n\nLa Inteligencia Artificial no reemplaza el juicio humano, lo potencia.\n\n\nEntender sus principios, límites y sesgos es clave para liderar con responsabilidad."
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#por-qué-importa-la-calidad-de-los-datos",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#por-qué-importa-la-calidad-de-los-datos",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#estructura-de-la-sesión",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#estructura-de-la-sesión",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "¿Por qué importa la calidad de los datos?",
-    "text": "¿Por qué importa la calidad de los datos?\n\nEl valor estratégico de la información depende de su calidad y gobernanza\nDecisiones erróneas → modelos ineficientes → pérdida de confianza.\n“Garbage in, garbage out” – ningún algoritmo corrige datos defectuosos"
+    "section": "Estructura de la Sesión",
+    "text": "Estructura de la Sesión\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n20 min\nDe los datos a los modelos\n\n\n2\n20 min\nCalidad de datos: las 4 dimensiones\n\n\n3\n20 min\nInterpretación de resultados\n\n\n4\n10 min\nCierre"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#dimensiones-de-la-calidad-de-datos",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#dimensiones-de-la-calidad-de-datos",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#puente-desde-la-clase-01",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#puente-desde-la-clase-01",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Dimensiones de la calidad de datos",
-    "text": "Dimensiones de la calidad de datos\n\n\n\n\n\n\n\n\n\nDimensión\nDescripción breve\nEjemplo\n\n\n\n\nCompletitud\nAusencia de valores faltantes\n% de clientes sin RUT o correo\n\n\nExactitud\nConcordancia con la realidad\nDirección o edad correcta\n\n\nConsistencia\nCoherencia entre sistemas\nFecha nacimiento &lt;&gt; fecha afiliación\n\n\nActualización\nVigencia de la información\nCliente activo con contacto obsoleto"
+    "section": "Puente desde la Clase 01",
+    "text": "Puente desde la Clase 01\n\nEn la clase anterior establecimos que toda decisión es una predicción y que los proyectos exitosos parten desde la decisión, no desde los datos.\nHoy entramos al siguiente nivel: ¿qué hacen los modelos exactamente, cómo se construyen, y cómo se leen sus resultados sin ser técnico?"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#qué-hace-un-modelo",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#qué-hace-un-modelo",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Riesgos de decisiones con datos de mala calidad",
-    "text": "Riesgos de decisiones con datos de mala calidad\n\nOperativos: reprocesos, errores en informes, baja productividad\n\nFinancieros: decisiones de inversión o riesgo erradas\nReputacionales: pérdida de confianza del cliente o del regulador\n\nAnalíticos: modelos con sesgos o predicciones inconsistentes"
+    "section": "¿Qué hace un modelo?",
+    "text": "¿Qué hace un modelo?\n\n\n\n\n\n\n\n\n\nTipo\nObjetivo\nEjemplo en banca\n\n\n\n\nDescriptivo\nExplica qué ocurrió\nSegmentación de clientes por comportamiento de pago\n\n\nPredictivo\nAnticipa qué ocurrirá\nProbabilidad de mora en los próximos 90 días\n\n\nPrescriptivo\nRecomienda una acción\nSugerir el producto con mayor propensión de compra\n\n\n\nIdea clave: la mayoría de los proyectos de analytics en servicios financieros son predictivos. El prescriptivo es el paso siguiente — y el más difícil de implementar."
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#gobernanza-de-datos",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#gobernanza-de-datos",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#la-ia-no-es-un-modelo-es-un-ecosistema",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#la-ia-no-es-un-modelo-es-un-ecosistema",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Gobernanza de datos",
-    "text": "Gobernanza de datos\nConjunto de políticas, roles y procesos que aseguran el uso responsable de los datos.\n\nDefine roles claros: propietario, custodio, analista, consumidor\nEstablece procesos de validación, trazabilidad y acceso\nImpulsa alineamiento con estrategia organizacional\n\n🔗 Ejemplo: catálogo de datos, control de acceso y políticas de retención."
+    "section": "La IA no es un modelo — es un ecosistema",
+    "text": "La IA no es un modelo — es un ecosistema\n\nUn LLM (Large Language Model) como GPT o Claude es solo una parte del sistema.\nPara responder una consulta compleja, se articulan varios componentes:\n\nComputer Vision → detecta y analiza imágenes (objetos, documentos, rostros)\nOCR → extrae texto de imágenes o PDFs\nSpeech Recognition / TTS → convierte audio en texto y viceversa\nLLM → interpreta, contextualiza y genera respuesta en lenguaje natural\nReasoning / Orchestration Layer → decide qué componentes usar y en qué orden"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ética-y-compliance-en-el-uso-de-datos",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ética-y-compliance-en-el-uso-de-datos",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ejemplo-sube-una-foto-de-un-contrato-y-pregunta-de-qué-trata",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ejemplo-sube-una-foto-de-un-contrato-y-pregunta-de-qué-trata",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Ética y compliance en el uso de datos",
-    "text": "Ética y compliance en el uso de datos\n\nResponsabilidad: tratar los datos como un activo compartido\n\nPrivacidad: cumplir normativas (LGPD, GDPR, Ley 19.628 en Chile)\n\nTransparencia: explicar decisiones automatizadas\nEquidad: evitar sesgos en IA o analítica predictiva"
+    "section": "Ejemplo: “sube una foto de un contrato y pregunta de qué trata”",
+    "text": "Ejemplo: “sube una foto de un contrato y pregunta de qué trata”\n\n\n\n\n\n\n\n\n\n\nEtapa\nComponente\nFunción\nSalida\n\n\n\n\n1\nComputer Vision\nDetecta que es un documento, no una foto\n“Documento detectado”\n\n\n2\nOCR\nExtrae el texto\n“Contrato de prestación de servicios…”\n\n\n3\nLLM\nInterpreta y resume cláusulas\n“Este contrato regula la relación entre X e Y”\n\n\n4\nOrquestador\nCoordina el flujo\nDecide: OCR → LLM"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#cierre-y-reflexión",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#cierre-y-reflexión",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#pregunta",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#pregunta",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "🚀 Cierre y reflexión",
-    "text": "🚀 Cierre y reflexión\n\nLa calidad asegura decisiones confiables.\n\nLa gobernanza garantiza responsabilidad y cumplimiento.\n\nLa ética construye confianza con clientes y sociedad."
+    "section": " Pregunta",
+    "text": "Pregunta\n\n¿Qué proceso de su área podría beneficiarse de alguno de estos componentes?\nPiensen en tareas repetitivas que involucran documentos, imágenes, audio, o texto no estructurado."
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#qué-es-y-qué-no-es-inteligencia-artificial",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#qué-es-y-qué-no-es-inteligencia-artificial",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#más-allá-de-datos-sucios",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#más-allá-de-datos-sucios",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "¿Qué es (y qué no es) Inteligencia Artificial?",
-    "text": "¿Qué es (y qué no es) Inteligencia Artificial?\n\nIA: capacidad de sistemas para aprender patrones y tomar decisiones basadas en datos\nNo es: magia ni conciencia, sino algoritmos que aprenden de ejemplos\n\nSe basa en estadística, aprendizaje automático y automatización\n\nEjemplo: un modelo que predice abandono de clientes no “piensa”, solo identifica patrones históricos."
+    "section": "Más allá de “datos sucios”",
+    "text": "Más allá de “datos sucios”\n\nEn la Clase 01 vimos que los enemigos silenciosos (representación, histórico, leakage) son problemas estructurales que pasan una revisión básica de calidad.\nPero también existe una capa más operacional: las dimensiones de calidad que afectan el día a día de cualquier proyecto de datos.\nLa diferencia: - Los enemigos silenciosos rompen el modelo - Las dimensiones de calidad erosionan la confianza en los resultados"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#la-ia-no-es-un-modelo-es-un-ecosistema-de-componentes",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#la-ia-no-es-un-modelo-es-un-ecosistema-de-componentes",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#las-4-dimensiones-de-calidad",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#las-4-dimensiones-de-calidad",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "🤖 La IA no es un modelo — es un ecosistema de componentes",
-    "text": "🤖 La IA no es un modelo — es un ecosistema de componentes\nUn LLM (Large Language Model) como GPT o Claude es solo una parte del sistema.\nPara responder una consulta compleja, se articulan varios segmentos de IA:\n\n\nComputer Vision → detecta y analiza imágenes (objetos, rostros, escenas).\n\nOCR (Reconocimiento Óptico de Caracteres) → extrae texto de imágenes o PDFs.\n\nSpeech Recognition / TTS → convierte audio en texto y viceversa.\n\nLLM → interpreta, contextualiza y genera una respuesta en lenguaje natural.\n\nReasoning / Orchestration Layer → decide qué componentes usar y en qué orden."
+    "section": "Las 4 dimensiones de calidad",
+    "text": "Las 4 dimensiones de calidad\n\n\n\n\n\n\n\n\n\nDimensión\nDescripción\nEjemplo en banca\n\n\n\n\nCompletitud\nSin valores faltantes\n% de clientes sin RUT, correo o fecha de nacimiento\n\n\nExactitud\nConcordancia con la realidad\nDirección o ingreso declarado vs. realidad\n\n\nConsistencia\nCoherencia entre sistemas\nFecha de nacimiento distinta en core bancario y CRM\n\n\nActualización\nVigencia de la información\nCliente activo con teléfono de contacto obsoleto"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ejemplo",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ejemplo",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#pregunta-1",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#pregunta-1",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Ejemplo",
-    "text": "Ejemplo\n\n“Subo una foto de un contrato y pregunto de qué trata”\n\n\n\n\n\n\n\n\n\nEtapa\nSegmento de IA\nFunción\nEjemplo de salida\n\n\n\n\n1\nComputer Vision\nDetecta texto y no una persona o paisaje.\n“Documento detectado”\n\n\n2\nOCR\nExtrae texto\n“Contrato de prestación de servicios…”\n\n\n3\nLLM\nInterpreta, resume cláusulas, responde preguntas.\n“Este contrato regula la relación entre la empresa y un proveedor.”\n\n\n4\nOrquestador\nCoordina\nDecide usar OCR → LLM"
+    "section": " Pregunta",
+    "text": "Pregunta\n\n¿Cuál de estas cuatro dimensiones es el problema más frecuente en su área o empresa?\n¿Tienen algún proceso hoy para detectarlo o medirlo?"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#modelos-descriptivos-vs.-predictivos",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#modelos-descriptivos-vs.-predictivos",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#riesgos-concretos-por-tipo-de-falla",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#riesgos-concretos-por-tipo-de-falla",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Modelos descriptivos vs. predictivos",
-    "text": "Modelos descriptivos vs. predictivos\n\n\n\n\n\n\n\n\nTipo de modelo\nObjetivo\nEjemplo ejecutivo\n\n\n\n\nDescriptivo\nExplica qué ocurrió\nSegmentación de clientes por comportamiento\n\n\nPredictivo\nAnticipa qué ocurrirá\nPredicción de egreso o mora\n\n\nPrescriptivo\nRecomienda acciones\nSugerir la mejor oferta según propensión"
+    "section": "Riesgos concretos por tipo de falla",
+    "text": "Riesgos concretos por tipo de falla\n\n\n\n\n\n\n\n\n\nDimensión\nRiesgo operativo\nRiesgo analítico\n\n\n\n\nCompletitud\nCampañas que no llegan al cliente\nModelos entrenados con registros incompletos\n\n\nExactitud\nEnvíos a dirección incorrecta\nVariables de entrada que no representan la realidad\n\n\nConsistencia\nReportes con cifras distintas según la fuente\nJoins incorrectos entre tablas, duplicados\n\n\nActualización\nGestión de cobranza a contacto equivocado\nModelo entrenado con datos que ya no reflejan el comportamiento actual"
+  },
+  {
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#gobernanza-quién-hace-qué",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#gobernanza-quién-hace-qué",
+    "title": "Data Science y Analytics en Servicios Financieros",
+    "section": "Gobernanza: quién hace qué",
+    "text": "Gobernanza: quién hace qué\n\nLa gobernanza no es un comité — es un sistema de roles, procesos y responsabilidades que asegura que los datos lleguen limpios, a tiempo y con trazabilidad.\n\n\n\n\n\n\n\nRol\nResponsabilidad\n\n\n\n\nPropietario del dato\nDefine qué significa cada campo y quién puede usarlo\n\n\nCustodio\nAsegura el almacenamiento, acceso y seguridad\n\n\nAnalista / Consumidor\nUsa los datos; reporta problemas de calidad\n\n\n\nSin propietario claro → nadie corrige → el problema escala."
+  },
+  {
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#procesos-de-gobernanza-en-la-práctica",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#procesos-de-gobernanza-en-la-práctica",
+    "title": "Data Science y Analytics en Servicios Financieros",
+    "section": "Procesos de gobernanza en la práctica",
+    "text": "Procesos de gobernanza en la práctica\n\n\nCatálogo de datos: inventario de qué existe, dónde vive, qué significa cada campo\nLinaje de datos: trazabilidad desde el origen hasta el modelo o reporte final\nControl de acceso: quién puede ver, modificar o exportar cada dataset\nPolítica de retención: cuánto tiempo se guardan datos y bajo qué normativa\n\n\nSin estos procesos, una auditoría de la CMF o un incidente de seguridad exponen al banco a riesgo legal y reputacional significativo."
   },
   {
     "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#qué-significa-un-resultado-confiable",
     "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#qué-significa-un-resultado-confiable",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Qué significa un “resultado confiable”",
-    "text": "Qué significa un “resultado confiable”\n\nUn modelo no entrega certezas, entrega probabilidades\nLa confiabilidad depende de calidad de datos, validación del model, comparación entre predicciones y realidad\nEjemplo: modelo de churn predice 80% → no dice “renunciará”, sino “probabilidad alta de egreso”"
+    "section": "¿Qué significa un resultado confiable?",
+    "text": "¿Qué significa un resultado confiable?\n\n\nUn modelo no entrega certezas — entrega probabilidades\nLa confiabilidad depende de tres factores:\n\nCalidad de los datos de entrada\nValidación del modelo (¿se probó con datos que no vio?)\nEstabilidad en el tiempo (¿sigue funcionando igual 6 meses después?)\n\n\nEjemplo: un modelo de churn predice 80% → no dice “este cliente se irá”, sino “hay alta probabilidad de egreso según los patrones históricos”."
   },
   {
     "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#predicción-y-margen-de-error",
     "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#predicción-y-margen-de-error",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Predicción y margen de error",
-    "text": "Predicción y margen de error\n\nTodo modelo tiene un grado de error aceptable según su propósito.\n\n\nSe mide con indicadores: precisión, recall, etc.\nEn contexto ejecutivo → “¿Cuánto confío en este resultado para tomar una decisión?”\n\nPor ejemplo un 90% de precisión puede ser excelente en marketing, pero insuficiente en salud."
+    "text": "Predicción y margen de error\n\nTodo modelo tiene un grado de error aceptable según su propósito.\n\n\n\n\n\n\n\n\nMétrica\nQué mide\nCuándo importa más\n\n\n\n\nPrecisión\nDe los que predijo positivo, ¿cuántos realmente lo eran?\nCuando el costo de un falso positivo es alto\n\n\nRecall\nDe los positivos reales, ¿cuántos detectó?\nCuando el costo de perder un caso es alto\n\n\nAUC-ROC\nCapacidad discriminatoria general del modelo\nComparación entre modelos\n\n\n\nUn 90% de precisión puede ser excelente en marketing y completamente insuficiente en detección de fraude."
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#overfitting-explicado-de-forma-ejecutiva",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#overfitting-explicado-de-forma-ejecutiva",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#overfitting-cuando-el-modelo-aprende-de-memoria",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#overfitting-cuando-el-modelo-aprende-de-memoria",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Overfitting explicado de forma ejecutiva",
-    "text": "Overfitting explicado de forma ejecutiva\n\n“Cuando el modelo aprende de memoria el pasado y no sabe generalizar al futuro.”\n\n\n\nSe ajusta tanto a los datos históricos que pierde capacidad predictiva\nSíntomas: Resultados casi perfectos en entrenamiento y mal desempeño con nuevos datos\nSolución: validación cruzada, regularización, simplicidad del modelo\n\n📉 Ejemplo: modelo que predice bien a clientes antiguos pero falla en nuevos afiliados."
+    "section": "Overfitting: cuando el modelo aprende de memoria",
+    "text": "Overfitting: cuando el modelo aprende de memoria\n\n\n“El modelo memorizó el pasado pero no aprendió a generalizar.”\n\n\nSe ajusta tanto a los datos históricos que pierde capacidad predictiva con datos nuevos\nSíntoma más común: precisión casi perfecta en entrenamiento (98%) y mediocre en producción (71%)\nCausa frecuente: demasiadas variables, modelo demasiado complejo, dataset pequeño\n\nAnalogía: un alumno que memoriza las respuestas del ensayo anterior y reprueba el examen real."
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#tipos-de-sesgos",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#tipos-de-sesgos",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ética-y-compliance",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ética-y-compliance",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Tipos de sesgos",
-    "text": "Tipos de sesgos\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\nMuestreo\nDatos no representan la población\nSolo clientes activos\n\n\nHistórico\nRefleja desigualdades pasadas\nSesgos en género o edad\n\n\nDe medición\nError en cómo se capturan datos\nEncuestas incompletas"
+    "section": "Ética y compliance",
+    "text": "Ética y compliance\n\nEl uso de datos y modelos no es solo un problema técnico — tiene implicancias legales y reputacionales.\n\n\n\n\n\n\n\n\nMarco\nAlcance\nRelevancia para banca chilena\n\n\n\n\nLey 19.628\nChile — protección de datos personales\nConsentimiento para uso de datos de clientes\n\n\nGDPR\nUnión Europea\nAplica si el banco opera o tiene clientes en Europa\n\n\nLGPD\nBrasil — similar al GDPR\nRelevante para bancos con operaciones en Brasil\n\n\n\nPrincipios transversales: consentimiento informado, derecho al olvido, explicabilidad de decisiones automatizadas, no discriminación.\n\nUn modelo que discrimina por género o zona geográfica puede cumplir técnicamente con las métricas y aun así ser ilegal."
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ejemplos-de-sesgos-y-consecuencias",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#ejemplos-de-sesgos-y-consecuencias",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#pregunta-2",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#pregunta-2",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Ejemplos de sesgos y consecuencias",
-    "text": "Ejemplos de sesgos y consecuencias\n\nReclutamiento automatizado: modelos que excluyen perfiles femeninos por datos históricos\nCrédito: mayor probabilidad de rechazo en comunas con bajo historial financiero\nSalud: subrepresentación de grupos etarios o regiones\n\nImpacto estratégico: decisiones injustas → daño reputacional → pérdida de confianza → riesgo legal."
+    "section": " Pregunta",
+    "text": "Pregunta\n\n¿Su organización tiene un proceso para revisar si un modelo discrimina antes de ponerlo en producción?\n¿Quién toma esa decisión — el equipo técnico, el área legal, el directorio?"
   },
   {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#cómo-mitigar-sesgos-desde-la-gestión",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#cómo-mitigar-sesgos-desde-la-gestión",
+    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#checklist-para-líderes",
+    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#checklist-para-líderes",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Cómo mitigar sesgos desde la gestión",
-    "text": "Cómo mitigar sesgos desde la gestión\n\nDiversificar fuentes de datos\nMonitorear resultados por grupo o segmento\nRevisar métricas éticas además de métricas de performance\nIncluir equipos interdisciplinarios en revisión de modelos"
-  },
-  {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#actividad-grupal-interpretando-resultados-de-ia",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#actividad-grupal-interpretando-resultados-de-ia",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Actividad grupal – Interpretando resultados de IA",
-    "text": "Actividad grupal – Interpretando resultados de IA\nCaso:\n\n\nUna AFP aplica un modelo de IA para predecir egresos de afiliados. El modelo entrega una probabilidad de egreso del 75% para un cliente de alto saldo. Los costos de retención estimados: $20.000 CLP por cliente. Los costos de pérdida si egresa: $250.000 CLP.\n\n\nInstrucciones (20 min)\nEn grupos, respondan:\n\n¿Vale la pena intervenir al cliente?\n¿Qué información adicional pedirían antes de decidir?\n¿Qué riesgo asumen si el modelo se equivoca?\n\nCompartir sus reflexiones."
-  },
-  {
-    "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#checklist-ejecutivo-para-líderes",
-    "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#checklist-ejecutivo-para-líderes",
-    "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "Checklist ejecutivo para líderes",
-    "text": "Checklist ejecutivo para líderes\n\n✅ Validar calidad de los datos usados.\n✅ Exigir interpretación comprensible de los resultados.\n✅ Evaluar sesgos potenciales y su impacto.\n✅ Considerar el costo del error (falso positivo/negativo).\n✅ Promover decisiones basadas en evidencia, no en intuición."
+    "section": "Checklist para líderes",
+    "text": "Checklist para líderes\n\nAntes de aprobar el uso de un modelo en producción:\n\n¿Los datos usados tienen buena calidad en las 4 dimensiones?\n¿El modelo fue validado con datos que no vio durante el entrenamiento?\n¿Se midió el error en distintos segmentos (edad, género, zona)?\n¿Se consideró el costo asimétrico del error (falso positivo vs. falso negativo)?\n¿El resultado es explicable a un cliente o al regulador si lo pide?\n¿Hay un proceso de monitoreo después del lanzamiento?"
   },
   {
     "objectID": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#cierre",
     "href": "clases/202606_diapo02_calidad-gobernanza-sesgos-ia.html#cierre",
     "title": "Data Science y Analytics en Servicios Financieros",
-    "section": "🧭 Cierre",
-    "text": "🧭 Cierre\n\nLa Inteligencia Artificial no reemplaza el juicio humano, lo potencia.\n\n\nEntender sus principios, límites y sesgos es clave para liderar con responsabilidad."
+    "section": "Cierre",
+    "text": "Cierre\n\nLa Inteligencia Artificial no reemplaza el juicio humano — lo potencia.\n\n\n\nEntender qué hace un modelo permite hacer mejores preguntas al equipo técnico\nConocer las dimensiones de calidad permite detectar problemas antes de que rompan un proyecto\nLeer resultados con criterio — probabilidades, márgenes de error, costos asimétricos — es la habilidad diferenciadora del líder data-driven"
   },
   {
     "objectID": "about.html",
@@ -725,7 +725,7 @@
     "href": "clases/diapo_01.html#resultado",
     "title": "Data Science y Analytics en Servicios Financieros",
     "section": "Resultado",
-    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.31\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 77.65\""
+    "text": "Resultado\n\nCódigo¿Pérdidas?Utilidades\n\n\n\nlibrary(tidyverse)\nlibrary(triangle)\n#set.seed(1234567)\n\nreps = 10000\nutilidad = matrix(NA, nrow = reps, ncol = 1)\nfor (i in 1:reps) {\n  x = sample(c(\"A\",\"B\",\"C\"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))\n  if (x == \"A\") {\n    precio = 12\n    cantidad = 110\n  }\n  else if (x == \"B\") {\n    precio = 13\n    cantidad = 100\n  }\n  else {\n    precio = 16\n    cantidad = 80\n  }\n  costo_variable_unitario = rtriangle(1, 9, 13, 11)\n  costo_fijo = 150\n  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo\n}\n\nutilidad &lt;- data.frame(utilidad)\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"Prob(utilidad&lt;0) = 0.3\"\n\n\n\n\n\n\n[1] \"Valor esperado utilidad = 79.03\""
   },
   {
     "objectID": "clases/diapo_01.html#hipótesis-de-los-mercados-eficientes",
